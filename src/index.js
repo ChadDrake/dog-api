@@ -1,10 +1,19 @@
 import $ from 'jquery';
 
-function main() {
-  console.log('DOM is loaded');
+function getNumberOfDoggos(){
+  let number = $('.number').val()
+$('.number').val('');
+  console.log(number);
+};
 
-  const startMsg = $('<p>Webpack is working!</p>');
-  $('#root').append(startMsg);
+function handleSumbit() {
+  $('main').on('submit'){
+getNumberOfDoggos
+  }
+};
+
+function main() {
+  
 }
 
 $(main);
