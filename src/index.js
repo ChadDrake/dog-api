@@ -7,11 +7,15 @@ function getNumberOfDoggos() {
 }
 
 function getImages() {
-  //let result =[];
+  console.log('test');
+  let result =[];
   fetch(`https://dog.ceo/api/breeds/image/random/${getNumberOfDoggos()}`
   )
     .then(response => response.json())
-    .then(responseJson => console.log(responseJson));
+    .then(responseJson => {
+      result = responseJson;
+      console.log(result.message);
+      });
 }
 function handleSumbit() {
   $('main').on('submit', function (e) {
